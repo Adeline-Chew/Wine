@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1500,
-    "height": 800,
+    "width": "container",
+    "background": "transparent",
+    "height": 500,
     "title": "Top Wine Production Countries",
     "params": [
         {
@@ -26,21 +27,26 @@
     },
     "mark": {
         "type": "bar",
-        "color": "#FF7777"
+        "color": "#96BAFF"
     },
     "encoding": {
         "x": {
             "field": "Country",
             "title": "Country",
             "type": "nominal",
+
             "axis": {
-                "labelAngle": 0
+                "labelAngle": 0,
+                "grid": false
             }
         },
         "y": {
             "field": "Wine production in mhl",
             "title": "Wine production in mhl",
-            "type": "quantitative"
+            "type": "quantitative",
+            "axis": {
+                "grid": false
+            }
         },
         "tooltip": [
             {
