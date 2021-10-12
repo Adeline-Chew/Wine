@@ -22,7 +22,7 @@
         }
     ],
     "data": {
-        "url": "https://raw.githubusercontent.com/Adeline-Chew/FIT3179-Data-Visualisation/main/data/production.csv"
+        "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/data/production.csv"
     },
     "mark": {
         "type": "bar",
