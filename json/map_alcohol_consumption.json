@@ -11,7 +11,7 @@
             "lookup": "properties.name",
             "from": {
                 "data": {
-                    "url": "https://raw.githubusercontent.com/Adeline-Chew/FIT3179-Data-Visualisation/main/data/drinks.csv"
+                    "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/data/drinks.csv"
                 },
                 "key": "Country",
                 "fields": ["Total"]
@@ -23,20 +23,20 @@
     "mark": { "type": "geoshape" },
     "encoding": {
         "color": {
-            "field": "Total Consumption",
+            "field": "Total Consumption in litre",
             "type": "quantitative",
             "scale": {
                 "type": "linear",
                 "domain": [0, 2, 4, 6, 8, 10, 12, 14],
                 "range": [
-                    "#80ed99",
-                    "#62be8f",
-                    "#58af8c",
-                    "#50a289",
-                    "#408984",
-                    "#367881",
-                    "#2b667d",
-                    "#22577a"
+                    "#bf8eca",
+                    "#b284c7",
+                    "#a177c3",
+                    "#916bbf",
+                    "#805eb5",
+                    "#6c4fa9",
+                    "#563f9c",
+                    "#3d2c8d"
                 ]
             }
         },
