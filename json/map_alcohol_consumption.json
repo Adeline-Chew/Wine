@@ -3,7 +3,7 @@
     "width": 1000,
     "height": 800,
     "data": {
-        "url": "https://raw.githubusercontent.com/Adeline-Chew/FIT3179-Data-Visualisation/main/json/world_topo.json",
+        "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/json/world_topo.json",
         "format": { "type": "topojson", "feature": "world" }
     },
     "transform": [
