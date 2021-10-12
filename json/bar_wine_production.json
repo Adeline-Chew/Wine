@@ -1,0 +1,63 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1500,
+    "height": 800,
+    "title": "Wine Production across countries",
+    "params": [
+        {
+            "name": "Year_Selection",
+            "value": 2016,
+            "bind": {
+                "input": "range",
+                "min": 2012,
+                "max": 2016,
+                "step": 1,
+                "name": "Year: "
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "datum.Year == Year_Selection"
+        }
+    ],
+    "data": {
+        "url": "https://raw.githubusercontent.com/Adeline-Chew/FIT3179-Data-Visualisation/main/data/production.csv"
+    },
+    "mark": {
+        "type": "bar",
+        "color": "#FF7777"
+    },
+    "encoding": {
+        "x": {
+            "field": "Country",
+            "title": "Country",
+            "type": "nominal",
+            "axis": {
+                "labelAngle": 0
+            }
+        },
+        "y": {
+            "field": "Wine production in mhl",
+            "title": "Wine production in mhl",
+            "type": "quantitative"
+        },
+        "tooltip": [
+            {
+                "field": "Country",
+                "title": "Country",
+                "type": "nominal"
+            },
+            {
+                "field": "Year",
+                "title": "Year",
+                "type": "ordinal"
+            },
+            {
+                "field": "Wine production in mhl",
+                "title": "Wine production in mhl",
+                "type": "quantitative"
+            }
+        ]
+    }
+}
