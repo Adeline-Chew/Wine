@@ -11,7 +11,7 @@
             "lookup": "properties.name",
             "from": {
                 "data": {
-                    "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/data/drinks.csv"
+                    "url": "https://raw.githubusercontent.com/Adeline-Chew/FIT3179-Data-Visualisation/main/data/drinks.csv"
                 },
                 "key": "Country",
                 "fields": ["Total"]

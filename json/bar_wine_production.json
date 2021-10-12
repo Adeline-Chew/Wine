@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1500,
     "height": 800,
-    "title": "Wine Production across countries",
+    "title": "Top Wine Production Countries",
     "params": [
         {
             "name": "Year_Selection",
