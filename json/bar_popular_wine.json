@@ -1,0 +1,89 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "background": "transparent",
+    "config": { "view": { "stroke": "transparent" } },
+    "height": 500,
+    "title": "The Most Popular Wine",
+    "data": {
+        "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/data/Popular_wine.csv"
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "bar",
+                "color": "#77ACF1",
+                "width": { "band": 0.1 },
+                "fillOpacity": 0.9
+            },
+            "encoding": {
+                "y": {
+                    "field": "Occurrence",
+                    "title": "Occurrence in Wine Reviews",
+                    "type": "quantitative",
+                    "sort": "ascending",
+                    "axis": {
+                        "grid": false
+                    }
+                },
+                "x": {
+                    "field": "Variety",
+                    "type": "nominal",
+                    "axis": {
+                        "labelAngle": 0,
+                        "grid": false
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Variety",
+                        "title": "Variety",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Occurrence",
+                        "title": "Occurrence in Wine Reviews",
+                        "type": "quantitative"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "size": 600,
+                "type": "circle",
+                "color": "#C67ACE",
+                "fillOpacity": 1
+            },
+            "encoding": {
+                "y": {
+                    "field": "Occurrence",
+                    "title": "Occurrence in Wine Reviews",
+                    "type": "quantitative",
+                    "sort": "ascending",
+                    "axis": {
+                        "grid": false
+                    }
+                },
+                "x": {
+                    "field": "Variety",
+                    "type": "nominal",
+                    "axis": {
+                        "labelAngle": 0,
+                        "grid": false
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Variety",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Occurrence",
+                        "type": "quantitative"
+                    }
+                ]
+            }
+        }
+    ]
+}

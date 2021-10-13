@@ -2,6 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "background": "transparent",
+    "config": { "view": { "stroke": "transparent" } },
     "height": 500,
     "title": "Top Wine Production Countries",
     "params": [
@@ -17,53 +18,27 @@
             }
         }
     ],
+    "data": {
+        "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/data/production.csv"
+    },
     "transform": [
+        {
+            "calculate": "{'Italy': '🇮🇹', 'France': '🇫🇷', 'Spain': '🇪🇸', 'United States': '🇺🇸', 'Australia': '🇦🇺', 'China': '🇨🇳', 'South Africa': '🇿🇦', 'Chile': '🇨🇱', 'Argentina': '🇦🇷'}[datum.Country]",
+            "as": "emoji"
+        },
+        {
+            "window": [{ "op": "rank", "as": "rank" }],
+            "groupby": ["Year", "Country"]
+        },
         {
             "filter": "datum.Year == Year_Selection"
         }
     ],
-    "data": {
-        "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/data/production.csv"
-    },
-    "mark": {
-        "type": "bar",
-        "color": "#96BAFF"
-    },
+    "mark": { "type": "text", "baseline": "middle" },
     "encoding": {
-        "x": {
-            "field": "Country",
-            "title": "Country",
-            "type": "nominal",
-
-            "axis": {
-                "labelAngle": 0,
-                "grid": false
-            }
-        },
-        "y": {
-            "field": "Wine production in mhl",
-            "title": "Wine production in mhl",
-            "type": "quantitative",
-            "axis": {
-                "grid": false
-            }
-        },
-        "tooltip": [
-            {
-                "field": "Country",
-                "title": "Country",
-                "type": "nominal"
-            },
-            {
-                "field": "Year",
-                "title": "Year",
-                "type": "ordinal"
-            },
-            {
-                "field": "Wine production in mhl",
-                "title": "Wine production in mhl",
-                "type": "quantitative"
-            }
-        ]
+        "y": { "field": "Country", "type": "nominal" },
+        "x": { "field": "rank", "type": "ordinal", "axis": null, "sort": null },
+        "text": { "field": "emoji", "type": "nominal" },
+        "size": { "value": 40 }
     }
 }

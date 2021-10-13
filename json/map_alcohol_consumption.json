@@ -2,6 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 1000,
     "height": 800,
+    "background": "transparent",
+    "config": { "view": { "stroke": "transparent" } },
     "data": {
         "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/json/world_topo.json",
         "format": { "type": "topojson", "feature": "world" }
@@ -23,19 +25,19 @@
     "mark": { "type": "geoshape" },
     "encoding": {
         "color": {
-            "field": "Total Consumption in litre",
+            "field": "Total Consumption",
             "type": "quantitative",
             "scale": {
                 "type": "linear",
                 "domain": [0, 2, 4, 6, 8, 10, 12, 14],
                 "range": [
-                    "#bf8eca",
-                    "#b284c7",
-                    "#a177c3",
-                    "#916bbf",
-                    "#805eb5",
-                    "#6c4fa9",
-                    "#563f9c",
+                    "#ffe3fe",
+                    "#ecc7ec",
+                    "#c996cc",
+                    "#af82c0",
+                    "#916bb3",
+                    "#7355a6",
+                    "#553e98",
                     "#3d2c8d"
                 ]
             }

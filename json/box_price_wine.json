@@ -1,0 +1,31 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "background": "transparent",
+    "config": { "view": { "stroke": "transparent" } },
+    "data": {
+        "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/data/Wine_Price.csv"
+    },
+    "mark": {
+        "type": "boxplot",
+        "extent": "min-max"
+    },
+    "encoding": {
+        "x": {
+            "field": "variety",
+            "title": "Variety of Wine",
+            "type": "nominal",
+            "axis": {
+                "labelAngle": 0,
+                "grid": false
+            }
+        },
+        "color": { "field": "variety", "type": "nominal", "legend": null },
+        "y": {
+            "field": "price",
+            "title": "Price (USD)",
+            "type": "quantitative",
+            "scale": { "zero": false }
+        }
+    }
+}
