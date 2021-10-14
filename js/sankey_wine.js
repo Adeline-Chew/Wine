@@ -9,7 +9,7 @@ $.get("/json/sankey_data.json", function (data) {
     myChart.setOption(
         (option = {
             title: {
-                text: "Sankey Diagram",
+                text: "What's The Difference Between Wines?",
             },
             tooltip: {
                 trigger: "item",
@@ -27,7 +27,7 @@ $.get("/json/sankey_data.json", function (data) {
                         {
                             depth: 0,
                             itemStyle: {
-                                color: "#fbb4ae",
+                                color: "#D5BFBF",
                             },
                             lineStyle: {
                                 color: "source",
@@ -37,7 +37,7 @@ $.get("/json/sankey_data.json", function (data) {
                         {
                             depth: 1,
                             itemStyle: {
-                                color: "#b3cde3",
+                                color: "#8CA1A5",
                             },
                             lineStyle: {
                                 color: "source",
@@ -47,7 +47,7 @@ $.get("/json/sankey_data.json", function (data) {
                         {
                             depth: 2,
                             itemStyle: {
-                                color: "#ccebc5",
+                                color: "#6D8299",
                             },
                             lineStyle: {
                                 color: "source",
@@ -57,7 +57,7 @@ $.get("/json/sankey_data.json", function (data) {
                         {
                             depth: 3,
                             itemStyle: {
-                                color: "#decbe4",
+                                color: "#316B83",
                             },
                             lineStyle: {
                                 color: "source",

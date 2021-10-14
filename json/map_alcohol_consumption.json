@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1000,
-    "height": 800,
+    "width": 800,
+    "height": 500,
     "background": "transparent",
     "config": { "view": { "stroke": "transparent" } },
     "data": {
@@ -20,25 +20,25 @@
             }
         },
 
-        { "calculate": "datum.Total + 1", "as": "Total Consumption" }
+        { "calculate": "datum.Total + 1", "as": "Total Consumption (litre)" }
     ],
     "mark": { "type": "geoshape" },
     "encoding": {
         "color": {
-            "field": "Total Consumption",
+            "field": "Total Consumption (litre)",
             "type": "quantitative",
             "scale": {
                 "type": "linear",
                 "domain": [0, 2, 4, 6, 8, 10, 12, 14],
                 "range": [
-                    "#ffe3fe",
-                    "#ecc7ec",
-                    "#c996cc",
-                    "#af82c0",
-                    "#916bb3",
-                    "#7355a6",
-                    "#553e98",
-                    "#3d2c8d"
+                    "#39a2db",
+                    "#4d9acc",
+                    "#6192bd",
+                    "#738ab0",
+                    "#917e99",
+                    "#aa7486",
+                    "#c06b76",
+                    "#df5e5e"
                 ]
             }
         },
