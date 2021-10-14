@@ -4,7 +4,6 @@
     "background": "transparent",
     "config": { "view": { "stroke": "transparent" } },
     "height": 500,
-    "title": "Top Wine Production Countries",
     "params": [
         {
             "name": "Year_Selection",

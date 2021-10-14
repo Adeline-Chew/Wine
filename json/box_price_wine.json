@@ -1,31 +1,77 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
+    "height": 400,
     "background": "transparent",
     "config": { "view": { "stroke": "transparent" } },
     "data": {
         "url": "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/data/Wine_Price.csv"
     },
-    "mark": {
-        "type": "boxplot",
-        "extent": "min-max"
-    },
-    "encoding": {
-        "x": {
-            "field": "variety",
-            "title": "Variety of Wine",
-            "type": "nominal",
-            "axis": {
-                "labelAngle": 0,
-                "grid": false
+    "layer": [
+        {
+            "mark": {
+                "type": "boxplot",
+                "extent": "min-max"
+            },
+
+            "encoding": {
+                "x": {
+                    "field": "variety",
+                    "title": "Variety of Wine",
+                    "type": "nominal",
+                    "axis": {
+                        "labelAngle": 0,
+                        "grid": false
+                    }
+                },
+                "color": {
+                    "field": "variety",
+                    "type": "nominal",
+                    "legend": null,
+                    "scale": {
+                        "type": "linear",
+                        "domain": [
+                            "Cabernet Franc",
+                            "Cabernet Sauvignon",
+                            "Chardonnay",
+                            "Merlot",
+                            "Pinot Noir",
+                            "Red Blend",
+                            "Riesling",
+                            "Sauvignon Blanc",
+                            "Syrah",
+                            "Zinfandel"
+                        ],
+                        "range": [
+                            "#00ADB5",
+                            "#51C4D3",
+                            "#A7C5EB",
+                            "#FFE3DE",
+                            "#E6D5B8",
+                            "#A6B1E1",
+                            "#E7D9EA",
+                            "#1687A7",
+                            "#866EC7",
+                            "#AAD8D3"
+                        ]
+                    }
+                },
+
+                "y": {
+                    "field": "price",
+                    "title": "Price (USD)",
+                    "type": "quantitative",
+                    "scale": { "zero": false }
+                }
             }
         },
-        "color": { "field": "variety", "type": "nominal", "legend": null },
-        "y": {
-            "field": "price",
-            "title": "Price (USD)",
-            "type": "quantitative",
-            "scale": { "zero": false }
+        {
+            "mark": { "type": "line", "color": "#28FFBF" },
+            "encoding": {
+                "x": { "field": "variety", "title": "Variety of Wine" },
+                "y": { "aggregate": "mean", "field": "price" },
+                "tooltip": null
+            }
         }
-    }
+    ]
 }

@@ -13,10 +13,36 @@
                 "type": "bar",
                 "color": "#38A3A5",
                 "width": { "band": 0.1 },
-                "fillOpacity": 0.9
+                "fillOpacity": 0.9,
+                "cursor": "pointer"
             },
-
+            "params": [
+                {
+                    "name": "highlight",
+                    "select": { "type": "point", "on": "mouseover" }
+                },
+                { "name": "select", "select": "point" }
+            ],
             "encoding": {
+                "fillOpacity": {
+                    "condition": { "param": "select", "value": 1 },
+                    "value": 0.3
+                },
+                "strokeWidth": {
+                    "condition": [
+                        {
+                            "param": "select",
+                            "empty": false,
+                            "value": 2
+                        },
+                        {
+                            "param": "highlight",
+                            "empty": false,
+                            "value": 1
+                        }
+                    ],
+                    "value": 0
+                },
                 "y": {
                     "field": "Occurrence",
                     "title": "Occurrence in Wine Reviews",

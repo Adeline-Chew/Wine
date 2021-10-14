@@ -8,9 +8,6 @@ $.get("/json/sankey_data.json", function (data) {
     myChart.hideLoading();
     myChart.setOption(
         (option = {
-            title: {
-                text: "What's The Difference Between Wines?",
-            },
             tooltip: {
                 trigger: "item",
                 triggerOn: "mousemove",
