@@ -4,7 +4,7 @@ var option;
 
 // Draw the chart
 myChart.showLoading();
-$.get("/json/sankey_data.json", function (data) {
+$.get("json/sankey_data.json", function (data) {
     myChart.hideLoading();
     myChart.setOption(
         (option = {
