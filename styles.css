@@ -1,0 +1,236 @@
+/* @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"; */
+:root {
+    --primary: #90aacb;
+}
+
+html,
+body {
+    /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+    background-color: #fff;
+    font-family: "IBM Plex Serif", serif !important;
+    font-weight: 400;
+    line-height: 1.4;
+    height: 100% !important;
+    margin: 0 !important;
+    /* overflow: hidden !important; */
+}
+
+#title {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#wrapper {
+    min-height: 100%;
+}
+
+#id {
+    position: relative;
+    width: 100%;
+}
+
+#headline {
+    font-family: "Playfair Display", serif;
+    font-size: 78px;
+    letter-spacing: 3px;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+#subheadline {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 22px;
+    text-align: left;
+}
+
+/* #subheadline::before {
+    content: "---";
+    display: inline-block;
+    margin-right: 10px;
+}
+#subheadline::after {
+    content: "---";
+    display: inline-block;
+    margin-left: 10px;
+} */
+
+#main-menu {
+    padding: 0;
+    text-align: center;
+}
+
+#footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    border-top: 0.2rem solid #000;
+    padding: 25px 0;
+    height: 80px;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+}
+
+.split-left {
+    width: 50%;
+}
+
+.split-right {
+    width: 50%;
+}
+
+.divider {
+    height: 8px;
+    border-top: 0.15rem solid #000;
+    border-bottom: 0.15rem solid #000;
+}
+
+.sans,
+.vega-bind {
+    font-family: "Roboto", sans-serif;
+}
+
+.slogan {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 24px;
+    font-style: italic;
+    text-align: right;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.viz {
+    height: 500px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.menu {
+    margin-bottom: 30px;
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
+
+.main_nav_cover {
+    border-bottom: 3px solid;
+    height: 40px;
+    line-height: 40px;
+}
+.smartnav .main_nav_cover {
+    border: 0;
+}
+.main_nav_cover #main-menu {
+    padding: 0;
+    text-align: center;
+}
+.main_nav_cover #main-menu li {
+    line-height: 40px;
+    padding: 0 30px;
+    display: inline-flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.main_nav_cover #main-menu li a {
+    font-size: 16px;
+    padding: 0;
+    position: relative !important;
+    text-transform: uppercase;
+}
+.main_nav_cover #main-menu li ul.sub-menu a {
+    text-transform: none;
+}
+ul.sub-menu {
+    display: none;
+    margin-left: 15px;
+}
+.main_nav_cover ul.sub-menu {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    display: none;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 100;
+}
+.main_nav_cover .menu-item-has-children ul.sub-menu a::before {
+    content: none;
+}
+.main-nav ul li ul.sub-menu li ul.sub-menu {
+    left: 100%;
+    padding: 0;
+    top: 0 !important;
+    transform: none;
+}
+.main_nav_cover ul.sub-menu li ul.sub-menu {
+    border-top: 1px solid !important;
+}
+
+.main_nav_cover ul.sub-menu {
+    border-top: 0 none;
+    left: 50%;
+    margin-left: 0;
+    min-width: 200px;
+    transform: translate(-50%);
+    border: 1px solid;
+}
+.main_nav_cover #main-menu li ul.sub-menu li {
+    border-bottom: 1px solid;
+    display: block;
+    line-height: 35px;
+    padding: 0 10px;
+}
+.main_nav_cover #main-menu li ul.sub-menu li:last-child {
+    border: none;
+}
+ul.sub-menu a::before {
+    content: none;
+}
+
+.main_nav,
+.header,
+.top_bar {
+    border-color: #000000 !important;
+}
+
+.header {
+    border-bottom: 1px solid;
+    padding-top: 30px;
+}
+
+a:focus,
+a:hover,
+.top_bar .social a:hover i,
+a.link-active,
+.sticky .alith_post_title a {
+    color: var(--primary);
+    text-decoration: none;
+}
+::selection {
+    background: #000;
+    /* WebKit/Blink Browsers */
+    color: #fff;
+}
+::-moz-selection {
+    background: #000;
+    /* Gecko Browsers */
+    color: #fff;
+}
+.alith_tagg:hover,
+.alith_tagg:focus {
+    background: var(--primary);
+}
