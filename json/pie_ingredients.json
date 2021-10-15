@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 600,
+    "background": "transparent",
+    "config": { "view": { "stroke": "transparent" } },
+    "data": {
+        "values": [
+            { "category": "Water", "value": 85 },
+            { "category": "Alcohol", "value": 13 },
+            { "category": "Glycerol", "value": 1 },
+            { "category": "Acids", "value": 0.5 },
+            { "category": "Carbohydrates", "value": 0.4 },
+            { "category": "Phenolics", "value": 0.1 }
+        ]
+    },
+    "mark": "arc",
+    "encoding": {
+        "theta": { "field": "value", "type": "quantitative" },
+        "color": { "field": "category", "type": "nominal" }
+    }
+}
