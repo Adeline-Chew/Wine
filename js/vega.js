@@ -1,5 +1,5 @@
 var spec1 =
-    "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/json/bar_wine_production.json";
+    "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/json/isotype_wine_production.json";
 var spec2 =
     "https://raw.githubusercontent.com/Adeline-Chew/Wine/main/json/map_alcohol_consumption.json";
 var spec4 =
