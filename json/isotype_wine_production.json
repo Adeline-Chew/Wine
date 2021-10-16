@@ -33,11 +33,18 @@
             "filter": "datum.Year == Year_Selection"
         }
     ],
-    "mark": { "type": "text", "baseline": "middle" },
+    "mark": {
+        "type": "text",
+        "baseline": "middle"
+    },
     "encoding": {
         "y": { "field": "Country", "type": "nominal" },
         "x": { "field": "rank", "type": "ordinal", "axis": null, "sort": null },
         "text": { "field": "emoji", "type": "nominal" },
-        "size": { "value": 40 }
+        "size": { "value": 40 },
+        "tooltip": [
+            { "field": "Year", "type": "nominal" },
+            { "field": "Country", "type": "nominal" }
+        ]
     }
 }
