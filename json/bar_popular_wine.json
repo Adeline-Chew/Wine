@@ -101,8 +101,7 @@
                     "field": "Occurrence",
                     "title": "Occurrence in Wine Reviews",
                     "type": "quantitative",
-                    "sort": "ascending",
-                    "axis": null
+                    "sort": "ascending"
                 },
                 "x": {
                     "field": "Variety",
