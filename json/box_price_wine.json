@@ -11,7 +11,8 @@
         {
             "mark": {
                 "type": "boxplot",
-                "extent": "min-max"
+                "extent": "min-max",
+                "size": 30
             },
 
             "encoding": {
@@ -66,7 +67,12 @@
             }
         },
         {
-            "mark": { "type": "line", "color": "#28FFBF" },
+            "mark": {
+                "type": "line",
+                "color": "#28FFBF",
+                "point": { "filled": false, "fill": "white" }
+            },
+
             "encoding": {
                 "x": { "field": "variety", "title": "Variety of Wine" },
                 "y": { "aggregate": "mean", "field": "price" },

@@ -17,6 +17,28 @@
     "mark": "arc",
     "encoding": {
         "theta": { "field": "value", "type": "quantitative" },
-        "color": { "field": "category", "type": "nominal" }
+        "color": {
+            "field": "category",
+            "type": "nominal",
+            "scale": {
+                "type": "linear",
+                "domain": [
+                    "Water",
+                    "Alcohol",
+                    "Glycerol",
+                    "Acids",
+                    "Carbohydrates",
+                    "Phenolics"
+                ],
+                "range": [
+                    "#889EAF",
+                    "#C37B89",
+                    "#BCCC9A",
+                    "#D1E8E4",
+                    "#4B6587",
+                    "#E4D8DC"
+                ]
+            }
+        }
     }
 }
