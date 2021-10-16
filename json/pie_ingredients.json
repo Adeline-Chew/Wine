@@ -19,6 +19,7 @@
         "theta": { "field": "value", "type": "quantitative" },
         "color": {
             "field": "category",
+            "title": "Category",
             "type": "nominal",
             "scale": {
                 "type": "linear",
@@ -39,6 +40,10 @@
                     "#E4D8DC"
                 ]
             }
-        }
+        },
+        "tooltip": [
+            { "field": "category", "title": "Category", "type": "nominal" },
+            { "field": "value", "title": "% in wine", "type": "quantitative" }
+        ]
     }
 }
