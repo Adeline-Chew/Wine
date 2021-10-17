@@ -75,7 +75,7 @@
 
             "encoding": {
                 "x": { "field": "variety", "title": "Variety of Wine" },
-                "y": { "aggregate": "median", "field": "price" },
+                "y": { "aggregate": "mean", "field": "price" },
                 "tooltip": null
             }
         }
