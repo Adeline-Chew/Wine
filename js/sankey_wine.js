@@ -87,6 +87,10 @@ myChart.setOption(
             trigger: "item",
             triggerOn: "mousemove",
         },
+        textStyle: {
+            color: "#fff",
+            fontFamily: "sans-serif",
+        },
         series: [
             {
                 type: "sankey",

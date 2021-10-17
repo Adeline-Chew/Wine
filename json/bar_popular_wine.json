@@ -11,7 +11,6 @@
         {
             "mark": {
                 "type": "bar",
-                "color": "#38A3A5",
                 "width": { "band": 0.2 },
                 "fillOpacity": 0.9,
                 "cursor": "pointer"
@@ -42,6 +41,38 @@
                         }
                     ],
                     "value": 0
+                },
+                "color": {
+                    "field": "Variety",
+                    "type": "nominal",
+                    "scale": {
+                        "type": "ordinal",
+                        "domain": [
+                            "Cabernet Franc",
+                            "Cabernet Sauvignon",
+                            "Chardonnay",
+                            "Merlot",
+                            "Pinot Noir",
+                            "Red Blend",
+                            "Riesling",
+                            "Sauvignon Blanc",
+                            "Syrah",
+                            "Zinfandel"
+                        ],
+                        "range": [
+                            "#DA7F8F",
+                            "#DA7F8F",
+                            "#FFD868",
+                            "#DA7F8F",
+                            "#DA7F8F",
+                            "#DA7F8F",
+                            "#FFD868",
+                            "#FFD868",
+                            "#DA7F8F",
+                            "#FFD868"
+                        ]
+                    },
+                    "legend": null
                 },
                 "y": {
                     "field": "Occurrence",
@@ -84,7 +115,7 @@
                     "as": "text_annotation"
                 }
             ],
-            "mark": { "type": "text", "align": "center", "dx": 2, "dy": -200 },
+            "mark": { "type": "text", "align": "center", "dx": 2, "dy": -210 },
             "encoding": {
                 "text": { "field": "text_annotation" }
             }
@@ -93,7 +124,7 @@
             "mark": {
                 "size": 1500,
                 "type": "circle",
-                "color": "#80ED99",
+                "color": "#C9CCD5",
                 "fillOpacity": 1
             },
             "encoding": {

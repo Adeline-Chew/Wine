@@ -6,8 +6,8 @@
     "config": { "view": { "stroke": "transparent" } },
     "data": {
         "values": [
-            { "category": "Water", "value": 85 },
-            { "category": "Alcohol", "value": 13 },
+            { "category": "Water", "value": 86 },
+            { "category": "Alcohol", "value": 14 },
             { "category": "Glycerol", "value": 1 },
             { "category": "Acids", "value": 0.5 },
             { "category": "Carbohydrates", "value": 0.4 },
