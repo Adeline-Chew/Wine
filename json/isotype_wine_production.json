@@ -41,7 +41,7 @@
         "y": { "field": "Country", "type": "nominal" },
         "x": { "field": "rank", "type": "ordinal", "axis": null, "sort": null },
         "text": { "field": "emoji", "type": "nominal" },
-        "size": { "value": 40 },
+        "size": { "value": 50 },
         "tooltip": [
             { "field": "Year", "type": "nominal" },
             { "field": "Country", "type": "nominal" }
